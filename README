@@ -1,0 +1,6 @@
+VPNC client + Proxy combo
+
+Dante is used as socks5 proxy
+
+Please change vpnc.env before using this
+Errors like: `Cannot open "/proc/sys/net/ipv4/route/flush": Read-only file system` can be safely ignored

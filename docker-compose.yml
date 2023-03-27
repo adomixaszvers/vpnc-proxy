@@ -1,0 +1,17 @@
+version: "3"
+services:
+  vpnc_client:
+    env_file: ./vpnc.env
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - "/dev/net/tun:/dev/net/tun"
+    build: ./vpnc-image
+    ports:
+      - "1070:1080/tcp"
+    restart: always
+    networks:
+      - vpnc_net
+
+networks:
+  vpnc_net: {}
